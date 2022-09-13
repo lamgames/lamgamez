@@ -1,0 +1,161 @@
+.container {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+.card {
+    /* margin: 2rem 0rem 0rem 0rem;
+    padding: 1rem;
+    text-align: center;  
+    border: 1px solid #eaeaea;
+    border-radius: 15px;  
+    max-width: 1000px;
+    background: #584BED;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    justify-content: center; */
+
+    margin: 2rem 0rem 0rem 0rem;
+    /* height: 50px; */
+    /* width: 200px; */
+    padding: 1rem;
+    background-color: #3a04a6;
+    color: white;
+    font-size:30px; 
+    border: 1px solid black;     
+    font-weight: bold;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #D5D4FC;
+  border-color: #6A55EB;
+}
+
+.moves_section {
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* align-items: center; */
+    justify-content: center;    
+}
+.moves_section > *{
+    
+}
+
+.rockBtn{
+  display: block;
+  background: url('../public/rock.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  width:50px;
+  height:50px;
+  margin: 10px;
+}
+.paperBtn{
+  display: block;
+  background: url('../public/paper.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  width:50px;
+  height:50px;
+  margin: 10px;
+}
+.scissorBtn{
+  display: block;
+  background: url('../public/scissor.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  width:50px;
+  height:50px;
+  margin: 10px;
+}
+
+
+
+
+/* spinner animation */
+.lds_ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds_ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #cef;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds_ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds_ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds_ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds_ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds_ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds_ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds_ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+.inp {
+  box-sizing: border-box;
+  margin: 10px 0px 0px 0px;
+  font-family: inherit;
+  font-size: 14px;
+  vertical-align: baseline;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: .16px;
+  border-radius: 0;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  width: 170px;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid #8d8d8d;
+  background-color: #484d49;
+  padding: 0 16px;
+  color: white;
+  transition: background-color 70ms cubic-bezier(.2,0,.38,.9),outline 70ms cubic-bezier(.2,0,.38,.9);
+}

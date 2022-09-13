@@ -1,0 +1,83 @@
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;     
+    font-weight: 500;    
+    padding: 2px;
+    font-family: sans-serif;
+    
+    /* font-color:  */
+}
+.cards > div{    
+    /* padding-right:10px; */
+    white-space: nowrap;    
+}
+
+.card {
+    border-style: solid;
+    border-color: #D5D4FC;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    /* margin: 1.5px; */
+}
+.card li{
+    list-style: none;
+}
+.card input{
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 14px;
+    vertical-align: baseline;
+    font-weight: 400;
+    line-height: 1.29;
+    letter-spacing: .16px;
+    border-radius: 0;
+    outline: 2px solid transparent;
+    outline-offset: -2px;    
+    height: 25px;
+    width:150px;
+    border: none;
+    border-bottom: 1px solid #8d8d8d;
+    background-color: #484d49;
+    padding: 0 16px;    
+    color: white;
+    transition: background-color 70ms cubic-bezier(.2,0,.38,.9),outline 70ms cubic-bezier(.2,0,.38,.9);  
+}
+.btnBull{
+    height: 35px; 
+    background-color: #4CAF50;
+    color: white;
+    font-size:20px;
+    font-weight: bold;
+    /* minidth:150px; */
+    min-width:150px;
+}
+.btnBear{
+    background-color: #f44336;  
+    height: 35px;
+    color: white;
+    font-size:20px;
+    font-weight: bold;
+    width:150px;
+}
+.btnClaim{
+    height: 40px;
+    width: 100%;
+    background-color: #3a04a6;
+    color: white;
+    font-size:20px;
+    font-weight: bold;
+}
+.card button:disabled{    
+    background-color: #878a88;    
+}
+
+.progressBar{ 
+}
+.progressBar::before{
+    width:100px;
+    content:" ";
+    background-color: #878a88;
+}
