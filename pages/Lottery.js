@@ -1,5 +1,5 @@
-import {useWeb3Contract, useMoralisSubscription} from "react-moralis"
-import {lottrAbi, contractAddresses} from "../constants"
+import {useWeb3Contract} from "react-moralis"
+import {lottrAbi, contractAddresses, providers} from "../constants"
 import {useMoralis} from "react-moralis"
 import { useEffect, useState } from "react"
 import {ethers} from "ethers"
@@ -12,7 +12,7 @@ export default function Lottery(){
     const {chainId: cidHex, isWeb3Enabled, account} = useMoralis()
     const chainId = parseInt(cidHex)
     const ppAddress = chainId in contractAddresses ? contractAddresses[chainId][2] : null
-    const provider = ethers.getDefaultProvider("http://127.0.0.1:8545")    
+    const provider = ethers.getDefaultProvider(providers[chainId])    
     let contract
  
     // console.log(contract)

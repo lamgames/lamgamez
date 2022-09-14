@@ -5,12 +5,12 @@ import { useEffect, useState } from "react"
 import {ethers} from "ethers"
 import io from 'socket.io-client'
 import {useNotification} from "web3uikit"
-import homeStyles from '../styles/Home.module.css'
 import ClipLoader from 'react-spinners/ClipLoader';
 import styles from '../styles/jkp.module.css'
 
 // const socket = io({closeOnBeforeunload: false})
 const socket = io("https://lamgames.herokuapp.com", {closeOnBeforeunload: false})
+// const socket = io.connect()
 
 export default function JanKenPon(){
 

@@ -10,8 +10,7 @@ export default function PricePrediction(){
     
     const {chainId: cidHex, isWeb3Enabled} = useMoralis()
     const chainId = parseInt(cidHex)
-    const lamAddress = chainId in contractAddresses ? contractAddresses[chainId][3] : null
-    const provider = ethers.getDefaultProvider("http://127.0.0.1:8545")
+    const lamAddress = chainId in contractAddresses ? contractAddresses[chainId][3] : null    
     
     const standardOptions = {
         abi: lamAbi,
@@ -85,10 +84,7 @@ export default function PricePrediction(){
         setProposals(newProposal)
     }
     useEffect(()=>{
-        if(isWeb3Enabled){        
-            provider.on("block", async ()=>{                
-                await updateUI()
-            })    
+        if(isWeb3Enabled){           
             updateUI()
         }
     },[isWeb3Enabled])

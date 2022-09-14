@@ -1,18 +1,19 @@
 import {useWeb3Contract} from "react-moralis"
-import {ppAbi, contractAddresses} from "../constants"
+import {ppAbi, contractAddresses, providers} from "../constants"
 import {useMoralis} from "react-moralis"
 import { useEffect, useState } from "react"
 import {ethers} from "ethers"
 import {useNotification} from "web3uikit"
 import ppStyles from '../styles/PricePrediction.module.css'
-import { useTimer } from 'react-timer-hook';
+
 
 export default function PricePrediction(){    
     
     const {chainId: cidHex, isWeb3Enabled} = useMoralis()
     const chainId = parseInt(cidHex)
     const ppAddress = chainId in contractAddresses ? contractAddresses[chainId][0] : null
-    const provider = ethers.getDefaultProvider("http://127.0.0.1:8545")
+    console.log(ppAddress)
+    const provider = ethers.getDefaultProvider(providers[chainId])
     
     const standardOptions = {
         abi: ppAbi,
