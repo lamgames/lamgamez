@@ -43,7 +43,7 @@ export default function Stake(){
             <div className={styles.card} style={{fontSize:"14px"}}>
                 <li style={{color:"#d5c3f2"}}>Staked: {printEth(e[1],4)} LAM</li>
                 <li style={{color:"#d5c3f2"}}>Staking Rewards: {printEth(e[0],4)} LAM</li>                
-                <li style={{color:"#8d95f4"}}>Dividends: {printEth(e[2],4)} BNB</li>                
+                <li style={{color:"#8d95f4"}}>Dividends: {printEth(e[2],4)} MATIC</li>                
             </div>
         </div>
     ))

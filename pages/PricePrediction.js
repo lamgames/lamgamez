@@ -64,7 +64,7 @@ export default function PricePrediction(){
         </div>
 
         <h2 style={{margin:"2px 0px 0px 0px", textAlign:'center'}}>Prize Pool</h2>        
-        <h4 style={{margin:"2px 0px 0px 0px", textAlign:'center'}}>{ethers.utils.formatEther(ppinfo['ticketValue'].mul(ppinfo['bearTickets'].add(ppinfo['bullTickets'])).toString())} BNB</h4>
+        <h4 style={{margin:"2px 0px 0px 0px", textAlign:'center'}}>{ethers.utils.formatEther(ppinfo['ticketValue'].mul(ppinfo['bearTickets'].add(ppinfo['bullTickets'])).toString())} MATIC</h4>
 
         <h5 style={{margin:"2px 0px 0px 0px", textAlign:'center'}}>Ticket value: {ethers.utils.formatEther(ppinfo['ticketValue'])}</h5>
         <h5 style={{margin:"2px 0px 0px 0px", textAlign:'center'}}>LAM minted per ticket: {ethers.utils.formatEther(ppinfo['mintPerGame'])}</h5>
@@ -128,7 +128,7 @@ export default function PricePrediction(){
                 </div>  
 
                 <h2 style={{margin:"2px 0px 0px 0px", textAlign:'center'}}>Prize Pool</h2>
-                <h4 style={{margin:"2px 0px 0px 0px", textAlign:'center'}}>{ethers.utils.formatEther(ppinfo['ticketValue'].mul(ppinfo['bearTickets'].add(ppinfo['bullTickets'])).toString())} BNB</h4>
+                <h4 style={{margin:"2px 0px 0px 0px", textAlign:'center'}}>{ethers.utils.formatEther(ppinfo['ticketValue'].mul(ppinfo['bearTickets'].add(ppinfo['bullTickets'])).toString())} MATIC</h4>
 
                 <div style={{display:"flex", justifyContent: 'space-between'}}>
                     <div className={ppStyles.card} style={{width:"100%", backgroundColor: livePrice.gt(ppinfo['startPrice'])?'#4CAF50':'' }}>
@@ -158,7 +158,7 @@ export default function PricePrediction(){
                         <div>Completed</div>
                 </div> 
                 <h2 style={{margin:"2px 0px 0px 0px", textAlign:'center'}}>Prize Pool</h2>        
-                <h4 style={{margin:"2px 0px 0px 0px", textAlign:'center'}}>{ethers.utils.formatEther(ppinfo['ticketValue'].mul(ppinfo['bearTickets'].add(ppinfo['bullTickets'])).toString())} BNB</h4>
+                <h4 style={{margin:"2px 0px 0px 0px", textAlign:'center'}}>{ethers.utils.formatEther(ppinfo['ticketValue'].mul(ppinfo['bearTickets'].add(ppinfo['bullTickets'])).toString())} MATIC</h4>
 
                 <div style={{display:"flex", justifyContent: 'space-between'}}>
                     <div className={ppStyles.card} style={{width:"100%", backgroundColor: ppinfo['endPrice'].gt(ppinfo['startPrice'])?'#4CAF50':'' }}>

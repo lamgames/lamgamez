@@ -49,10 +49,10 @@ export default function Lottery(){
         </div>
         <div className={ppStyles.card}>                        
             <h2 style={{margin:"20px 0px 0px 0px"}}>Prize Pool</h2>
-            <h4>{ethers.utils.formatEther(ppinfo['ticketValue'].mul(ppinfo['numTickets']).toString())} BNB</h4>
+            <h4>{ethers.utils.formatEther(ppinfo['ticketValue'].mul(ppinfo['numTickets']).toString())} MATIC</h4>
             <br></br>
             <li style={{fontStyle:"italic"}}>Total Tickets bought: {ppinfo['numTickets'].toString()}</li>
-            <li style={{fontStyle:"italic"}}>Ticket cost: {ethers.utils.formatEther(ppinfo['ticketValue'])} BNB</li>            
+            <li style={{fontStyle:"italic"}}>Ticket cost: {ethers.utils.formatEther(ppinfo['ticketValue'])} MATIC</li>            
             <li style={{fontStyle:"italic"}}>LAM minted per ticket: {}</li>            
             <br></br>
             {ppinfo['winTicketValue']!=0? 

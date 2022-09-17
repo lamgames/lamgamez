@@ -74,8 +74,8 @@ export default function BuyLam(){
                         onError: (e)=>console.log(e),
                     }                    
                 })
-            }}>Buy {toBuy} LAM with {ethers.utils.formatEther(costToken.mul(toBuy))} BNB</button>
-            <h4 style={{margin:"10px"}}> Cost of token - {ethers.utils.formatEther(costToken)} BNB</h4>
+            }}>Buy {toBuy} LAM with {ethers.utils.formatEther(costToken.mul(toBuy))} MATIC</button>
+            <h4 style={{margin:"10px"}}> Cost of token - {ethers.utils.formatEther(costToken)} MATIC</h4>
         </div>
     )
 
