@@ -145,7 +145,7 @@ export default function PricePrediction(){
                     <div> BET: {ppinfo['bet'].toString() ==1 ? "BULL" : "BET"}</div>
                     </>}
                     <div>Locked Price: {ethers.utils.formatEther(ppinfo['startPrice'])}</div>
-                    <div style={{color: livePrice.gt(ppinfo['startPrice'])?'green':'red' }}>Live Price: {ethers.utils.formatEther(livePrice)}</div>
+                    <div style={{color: livePrice.gt(ppinfo['startPrice'])?'green':'red' }}>Live Price: {ethers.utils.formatUnits(livePrice, 8)}</div>
                 </div>
             </div>
         )
